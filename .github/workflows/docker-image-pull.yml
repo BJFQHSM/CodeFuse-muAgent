@@ -32,5 +32,5 @@ jobs:
 
           # 使用Dockerfile构建镜像
           docker pull --platform ${{ matrix.os }}/${{ matrix.architecture }}  ghcr.io/codefuse-ai/${{ matrix.service.name }}
-          docker tag ghcr.io/codefuse-ai/${{ matrix.service.name }} crpi-hc8qe54smbuzja1o.cn-hangzhou.personal.cr.aliyuncs.com/${{ matrix.service.name }}-${{ matrix.architecture }}
-          docker push crpi-hc8qe54smbuzja1o.cn-hangzhou.personal.cr.aliyuncs.com/${{ matrix.service.name }}-${{ matrix.architecture }}
+          docker tag ghcr.io/codefuse-ai/${{ matrix.service.name }} crpi-hc8qe54smbuzja1o.cn-hangzhou.personal.cr.aliyuncs.com/mu-agent/${{ matrix.service.name }}-${{ matrix.architecture }}
+          docker push crpi-hc8qe54smbuzja1o.cn-hangzhou.personal.cr.aliyuncs.com/mu-agent/${{ matrix.service.name }}-${{ matrix.architecture }}
