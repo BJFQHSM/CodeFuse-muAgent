@@ -28,7 +28,7 @@ jobs:
       - name: Build the Docker image
         run: |
           # 登录阿里云镜像仓库
-          echo ${{ secrets.ALIYUN_PASSWORD }} | docker login --username=${{ secrets.ALIYUN_USERNAME }} --password-stdin registry.cn-hangzhou.aliyuncs.com
+          echo ${{ secrets.ALIYUN_PASSWORD }} | docker login --username=${{ secrets.ALIYUN_USERNAME }} --password-stdin crpi-hc8qe54smbuzja1o.cn-hangzhou.personal.cr.aliyuncs.com
 
           # 使用Dockerfile构建镜像
           docker pull --platform ${{ matrix.os }}/${{ matrix.architecture }}  ghcr.io/codefuse-ai/${{ matrix.service.name }}
